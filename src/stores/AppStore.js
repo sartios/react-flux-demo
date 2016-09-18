@@ -1,6 +1,6 @@
 var AppDispatcher = require('../dispatcher/AppDispatcher');
 var EventEmitter = require('events').EventEmitter;
-var assign = require('assign');
+var assign = require('object-assign');
 
 var CHANGE_EVENT = 'change';
 
@@ -18,7 +18,6 @@ var AppStore = assign({}, EventEmitter.prototype, {
 
 AppDispatcher.register(function(action){
 	if(action.actionType == 'sayHello'){
-		console.log('Hello World!!');
 		AppStore.emitChange();
 	}
 });

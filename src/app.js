@@ -1,9 +1,10 @@
 var React = require('react');
+var Sample = require('./components/sample');
 
 var App = React.createClass({
 	render: function(){
 		return (<div>
-			<h2>Hello World</h2>
+				<Sample />
 			</div>);
 	}
 });
