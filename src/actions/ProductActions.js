@@ -8,21 +8,22 @@ var ProductActions = {
 			product: product
 		});
 	},
-	update: function(product){
+	update: function(id,product){
 		AppDispatcher.dispatch({
 			actionType: ProductContstants.PRODUCT_UPDATE,
-			product: product
-		});
-	},
-	delete: function(id){
-		AppDispatcher.dispatch({
-			actionType: ProductContstants.PRODUCT_DELETE,
+			product: product,
 			id: id
 		});
 	},
-	deleteAll: function(){
+	destroy: function(id){
 		AppDispatcher.dispatch({
-			actonType: ProductContstants.PRODUCT_DELETE_ALL
+			actionType: ProductContstants.PRODUCT_DESTROY,
+			id: id
+		});
+	},
+	destroyAll: function(){
+		AppDispatcher.dispatch({
+			actonType: ProductContstants.PRODUCT_DESTROY_ALL
 		});
 	},
 	getAll: function(){
