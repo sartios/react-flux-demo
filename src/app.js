@@ -4,8 +4,13 @@ var Products = require('./components/Products');
 
 var App = React.createClass({
 	render: function(){
-		return (<div>
-				<Products />
+		return (
+			<div className="container-fluid">
+				<div className="row">
+					<div className="col-sm-12">
+						<Products />
+					</div>
+				</div>
 			</div>);
 	}
 });

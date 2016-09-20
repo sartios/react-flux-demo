@@ -40,9 +40,8 @@ var Products = React.createClass({
 				<div>
 					{products}	
 				</div>
-				<button value='generate' onClick={this._generateSample}>Generate</button>
+				<button className='btn btn-default' value='generate' onClick={this._generateSample}>Generate</button>
 			</div>)
-
 	}
 });
 
